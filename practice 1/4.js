@@ -26,21 +26,29 @@ output: ['saya', 'dan', 'suka', 'makan', 'nasi']
 */
 
 const uniqueFinder = (words) => {
-    // console.log([...words])
-    let temp = [];
-    for (let i = 0; i < words.length; i++) {
-        if (words[i] === " ") {
-            temp.push('')
+
+    var temp = [];
+    var buf = "";
+    for(var i = 0; i < words.length; i++) {
+        if(words[i] == " "){
+            temp.push(buf);
+            buf = "";
         }else{
-            let word = words[i];
-            temp.push(word);
+            buf += words[i].toLowerCase();
         }
     }
-    return temp;
+
+    if(buf.length > 0) {
+        temp.push(buf);
+    }
+
+    return Array.from(new Set(temp))
 }
 
-console.log(uniqueFinder('hello black dragon and hello red dragon')); // ['hello', 'black', 'dragon', 'and', 'red']
-// console.log(uniqueFinder('hello HELLo hEllO hlloe')); // ['hello', 'hlloe']
-// console.log(uniqueFinder('john is coding and he is coding')); // ['john', 'is', 'coding', 'and', 'he']
-// console.log(uniqueFinder('blue blue red blue violet red violet')); // ['blue', 'red', 'violet']
-// console.log(uniqueFinder('')); // 'NO WORDS'
+console.log(uniqueFinder('hello black dragon and hello red dragon'));
+
+ // ['hello', 'black', 'dragon', 'and', 'red']
+console.log(uniqueFinder('hello HELLo hEllO hlloe')); // ['hello', 'hlloe']
+console.log(uniqueFinder('john is coding and he is coding')); // ['john', 'is', 'coding', 'and', 'he']
+console.log(uniqueFinder('blue blue red blue violet red violet')); // ['blue', 'red', 'violet']
+console.log(uniqueFinder('')); // 'NO WORDS'
