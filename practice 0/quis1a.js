@@ -10,7 +10,7 @@ var urutkan = () => {
 }
 urutkan();
 
-//soal 1 B
+// soal 1 B
 console.log("// jawaban soal nomor 1 B")
 var balik = () => {
   nama = [ "Faqih", "felix", "FAdlan", "yayang", "fikri", "rijal"];
@@ -21,16 +21,16 @@ var balik = () => {
 balik();
 
 //soal 1 C
-console.log("// jawaban soal nomor 1 C")
-var count = () => {
-  nilai1 = [ 23, 7, 9];
-  nilai2 = [-2, 0];
+// console.log("// jawaban soal nomor 1 C")
+// var count = () => {
+//   nilai1 = [ 23, 7, 9];
+//   nilai2 = [-2, 0];
 
-  for (i = 0; i < nilai2.length; i++) {
-    for (j = 1; j > 0 ; j--) {
-      console.log(nilai1[i] + nilai2[i])
-    }
-  }
-}
+//   for (i = 0; i < nilai2.length; i++) {
+//     for (j = 1; j > 0 ; j--) {
+//       console.log(nilai1[i] + nilai2[i])
+//     }
+//   }
+// }
 
-count();
+// count();
