@@ -10,14 +10,14 @@
 // data(user)
 
 
-// const hitung = (data1, data2) => {
-//     console.log(data1 + data2);
-// }
+const hitung = (data1, data2) => {
+    console.log(data1 + data2);
+}
 
-// const data = (cb) => {
-//     const angka1 = 12;
-//     const angka2 = 24;
-//     cb(angka1,angka2)
-// }
+const data = (cb) => {
+    const angka1 = 12;
+    const angka2 = 24;
+    cb(angka1,angka2)
+}
 
-// data(hitung)
+data(hitung)

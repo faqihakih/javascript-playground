@@ -126,3 +126,116 @@
 // solution('hello') // 'olleh'
 // solution('') //''
 // solution('h') // 'h'
+
+
+// function positiveSum(arr) {
+//     // console.log(arr);
+//     let newArr = [];
+
+//     for (let i = 0; i < arr.length; i++) {
+//         if (arr[i] < 0) {
+//             arr[i] = 0
+//         }
+//         newArr.push(arr[i])
+//     }
+
+//     let result = 0;
+//     for (let i = 0; i < newArr.length; i++) {
+//         // result = result + newArr[i]
+//         result += newArr[i]
+//     }
+//     return result;
+// }
+
+// positiveSum([1,2,3,4,5])//,15);
+// positiveSum([1,-2,3,4,5])//,13);
+// positiveSum([])//,0);
+// positiveSum([-1,-2,-3,-4,-5])//,0);
+// positiveSum([-1,2,3,4,-5]) //,9)
+
+// function sumStr(a, b) {
+//     let result = parseInt(a) + parseInt(b)
+//     return result.toString()
+// }
+
+// sumStr("4", "5")//, "9");
+// sumStr("34", "5")//, "39");
+
+
+// function sumOfDifferences(arr) {
+//     let sortDes = arr.sort( (a, b) => b-a)
+//     let temp = [];
+
+//     for (let i = 0; i < sortDes.length-1; i++) {
+//         let sum = sortDes[i]
+//         temp.push(sum)
+//     }
+//     let tempscnd = [];
+//     for (let j = 1; j < sortDes.length; j++) {
+//         let sum = sortDes[j]
+//         tempscnd.push(sum)
+//     }
+
+//     value1 = temp.reduce((a, b) => a+b)
+//     value2 = tempscnd.reduce((a, b) => a+b)
+
+//     let result = value1 - value2
+
+//     console.log(result);
+// return resultl
+
+// result.reduce((a, b) => a + b)
+
+// console.log(result.reduce((a, b) => a - b));
+
+
+// }
+
+// const sumOfDifferences = arr => arr
+//     .sort((a, b) => b - a)
+//     .map((a, i) => a - arr[i + 1] || 0)
+//     .reduce((a, b) => a + b, 0);
+
+// sumOfDifferences([1, 2, 10])//, 9);
+
+// sumOfDifferences([-3, -2, -1])//, 2);
+
+
+// let myPromise = new Promise(function (myResolve, myReject) {
+//     // "Producing Code" (May take some time)
+//     let misal = false;
+
+//     misal ? myResolve("hai kaka") : myReject("error su")
+// })
+
+// // "Consuming Code" (Must wait for a fulfilled Promise)
+// myPromise.then(
+//     function (value) {
+//         console.log(value);
+//     }
+// ).catch(
+//     function (params) {
+//         console.log(params);
+//     }
+// )
+
+const promise = new Promise(function (resolve, reject) {
+    // do a thing, possibly async, then…
+    let error = false;
+    if (error) {
+        resolve(
+            11 + 12
+        );
+    }
+    else {
+        reject(
+            12 * 20
+        );
+    }
+});
+
+promise.then(
+    (res) => console.log(res)
+).catch(
+    (err) => console.log(err)
+)
