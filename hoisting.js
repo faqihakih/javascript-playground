@@ -154,11 +154,23 @@
 // positiveSum([-1,2,3,4,-5]) //,9)
 
 // function sumStr(a, b) {
+
+//     if ( b == "" && a == "") {
+//         a = 0;
+//         b = 0;
+//         // console.log(a, b);
+//     }else if (a == "") {
+//         a = 0
+//     }else if (b == "") {
+//         b = 0;
+//     }
 //     let result = parseInt(a) + parseInt(b)
-//     return result.toString()
+//     // console.log(a+"+"+ b);
+//     console.log(result.toString());
+//     // return result.toString()
 // }
 
-// sumStr("4", "5")//, "9");
+// sumStr("", "")//, "9");
 // sumStr("34", "5")//, "39");
 
 
@@ -219,23 +231,82 @@
 //     }
 // )
 
-const promise = new Promise(function (resolve, reject) {
-    // do a thing, possibly async, then…
-    let error = false;
-    if (error) {
-        resolve(
-            11 + 12
-        );
-    }
-    else {
-        reject(
-            12 * 20
-        );
-    }
-});
+// const promise = new Promise(function (resolve, reject) {
+//     // do a thing, possibly async, then…
+//     let error = false;
+//     if (error) {
+//         resolve(
+//             11 + 12
+//         );
+//     }
+//     else {
+//         reject(
+//             12 * 20
+//         );
+//     }
+// });
 
-promise.then(
-    (res) => console.log(res)
-).catch(
-    (err) => console.log(err)
-)
+// promise.then(
+//     (res) => console.log(res)
+// ).catch(
+//     (err) => console.log(err)
+// )
+
+// function invert(array) {
+
+//     // console.log(array);
+//     let data = [];
+//     for (let i = 0; i < array.length; i++) {
+//         // console.log(array[i]);
+//         if (array[i] > 0) {
+//             data.push(-Math.abs(array[i]))
+//         } else {
+//             data.push(Math.abs(array[i]))
+//         }
+//     }
+//     console.log(data);
+//     return data;
+// }
+
+// invert([1,2,3,4,5])//, [-1,-2,-3,-4,-5]);
+// invert([1,-2,3,-4,5])//, [-1,2,-3,4,-5]);
+// invert([])//, []);
+// invert([0])//, [0]);
+
+// Sum Numbers
+// function sum (numbers) {
+//     "use strict";
+
+// console.log(numbers.length == 0 ? 0 : numbers.reduce( (a, b) => a+b)); 
+// return numbers.length == 0 ? 0 : numbers.reduce( (a, b) => a+b)
+// };
+
+// sum([])//, 0);
+// sum([1, 5.2, 4, 0, -1])//, 9.2);
+
+// function multiTable(number) {
+//     // good luck
+//     for (let i = 1; i <= 10; i++) {
+//         // let a = i * number
+//         // console.log(i +" * "+ number +" = "+ i*number)
+//         i +" * "+ number +" = "+a
+//         // return i +" * "+ number +" = "+a
+//     }
+
+// }
+
+// multiTable(5)//, '1 * 5 = 5\n2 * 5 = 10\n3 * 5 = 15\n4 * 5 = 20\n5 * 5 = 25\n6 * 5 = 30\n7 * 5 = 35\n8 * 5 = 40\n9 * 5 = 45\n10 * 5 = 50');
+// multiTable(1)//, '1 * 1 = 1\n2 * 1 = 2\n3 * 1 = 3\n4 * 1 = 4\n5 * 1 = 5\n6 * 1 = 6\n7 * 1 = 7\n8 * 1 = 8\n9 * 1 = 9\n10 * 1 = 10');
+
+// function hello(name) {
+//     console.log(
+//         name == undefined || name == '' ? "Hello, World!" : "Hello, "+name.charAt(0).toUpperCase()+name.slice(1).toLowerCase()+'!'
+    // );
+    // return name == undefined || name == '' ? "Hello, World!" : "Hello, "+name.toLowerCase().charAt(0).toUpperCase()
+    // console.log(typeof(name));
+// }
+
+// hello('johN')//, 'Hello, John!', "returns 'Hello, John!' when given 'johN'")
+// hello('alice')//, 'Hello, Alice!', "returns 'Hello, Alice!' when given 'alice'")
+// hello()//, 'Hello, World!', "returns 'Hello, World!' when name is not given")
+// hello('')//, 'Hello, World!', "returns 'Hello, World!' when name is an empty String" )
